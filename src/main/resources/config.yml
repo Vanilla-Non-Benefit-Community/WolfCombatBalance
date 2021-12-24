@@ -1,0 +1,70 @@
+CombatBalance:
+  #每次攻击叠加层数，必须大于0
+  EffectTimes: 0.3
+  #每1层对玩家伤害的影响，-2代表削弱2%，2代表增强2%
+  EffectPercent: -2.0
+  #30意味着玩家伤害最多被削弱30层，即最多 减少玩家60%伤害
+  MaxEffectTimes: 30.0
+  #此处为游戏刻，60即为每3.0秒降低1层
+  CoolDownTime: 60
+  #计时器线程限制
+  ThreadLimit: 1
+  #是否开启聊天栏消息提示
+  ShowMessage: false
+  #Bossbar显示相关
+  Bossbar:
+    #是否开启Bossbar疲劳值提示？
+    ShowBar: true
+    #自定义BossBar相关属性
+    Title: "疲劳值"
+    #Bossbar的颜色，可设置为 BLUE RED GREEN PINK PURPLE WHITE YELLOW
+    Color: "BLUE"
+    #Bossbar总共的格数，可设置为 6 10 12 20
+    Style: 6
+
+CustomMob:
+  #========================================
+  # 注意
+  #========================================
+  # 使用 -5 意味着 削弱怪物5%
+  # 使用 5 意味着 增强怪物5%
+  #
+  # 可以使用小数
+  #========================================
+  HealthChangePercent: 0.0
+  DamageChangePercent: 0.0
+  SpeedChangePercent: 0.0
+  Potions: []
+    #请删掉Potions后面的括号，然后按照下面的格式来写药水效果
+    #BUFF名称,效果强度
+    #- SPEED,0
+    #- INVISIBILITY,0
+  GolemAttributeMultiple:
+    #在原版的数值基础上翻倍，1.0为原版数值
+    IronGolem:
+      #铁傀儡
+      Health: 1.0
+      Damage: 1.0
+      Speed: 1.0
+    SnowGolem:
+      #雪傀儡
+      Health: 2.0
+      Speed: 1.0
+Others:
+  #这个是设置全局的雪球的伤害数值，原版是0
+  SnowballDamage: 2.0
+  Bed:
+    #设置为false，则床在地狱，末地不会爆炸
+    Explosion: true
+    #这个爆炸伤害只有当Bed Explosion设置为true才会生效
+    ExplosionMaxDamage: 8.0
+  Lava:
+    #岩浆直接对玩家造成的伤害
+    Damage: 2.0
+  Fall:
+    #摔落伤害倍率 1.0 为原版默认
+    DamagePercent: 1.0
+Message:
+  Prefix: "§7[ §b绫狼战斗 §7] "
+  AttackMessage: "§f你在战斗中§c消耗§f了体力，当前疲劳值: §e"
+  RegenMessage: "§f你§a恢复§f了些许体力，当前疲劳值: §e"

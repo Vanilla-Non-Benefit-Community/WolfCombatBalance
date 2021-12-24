@@ -1,0 +1,12 @@
+name: WolfCombatBalance
+version: '${project.version}'
+main: org.minecraft.server.wolf.wolfcombatbalance.Main
+api-version: 1.17
+authors: [ MikkoAyaka ]
+description: Just a combat balance plugin.
+commands:
+  wolfcombatbalance:
+    aliases:
+      - "wcb"
+      - "combatbalance"
+      - "cb"
